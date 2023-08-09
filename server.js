@@ -13,7 +13,13 @@ const path = require('path');
 mongoose.set("strictQuery", true);
 
 const app = express();
-app.use(cors({}))
+app.use(
+  cors({
+    origin: ["https://adorable-tanuki-92cddb.netlify.app"],
+    credentials: true,
+  })
+);
+
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
