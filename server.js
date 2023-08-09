@@ -13,12 +13,13 @@ const path = require('path');
 mongoose.set("strictQuery", true);
 
 const app = express();
+app.use(cors({}))
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors({}))
+
 /* app.use(
   cors({
     origin: ["http://localhost:3000", "https://main--adorable-tanuki-92cddb.netlify.app"],
