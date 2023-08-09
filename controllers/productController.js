@@ -20,7 +20,7 @@ if (!name || !category || !quantity || !price || !description) {
    let uploadedFile;
    try {
      uploadedFile = await cloudinary.uploader.upload(req.file.path, {
-       folder: "Bills",
+       folder: "Bills image",
        resource_type: "image",
      });
    } catch (error) {
