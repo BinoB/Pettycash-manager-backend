@@ -13,18 +13,19 @@ const path = require('path');
 mongoose.set("strictQuery", true);
 
 const app = express();
-app.use(
-  cors({
-    origin: ["https://adorable-tanuki-92cddb.netlify.app"],
-    credentials: true,
-  })
-);
 
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(
+  cors({
+    origin: ["https://adorable-tanuki-92cddb.netlify.app"],
+    credentials: true,
+  })
+);
 
 /* app.use(
   cors({
